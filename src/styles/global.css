@@ -28,7 +28,7 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
-  
+
   .btn-primary:disabled::before,
   .btn-primary:focus-visible::before,
   .btn-primary:hover::before {
@@ -42,7 +42,8 @@
     letter-spacing: 2px;
   }
 
-  .btn:focus:not(:disabled), .btn:hover:not(:disabled) {
+  .btn:focus:not(:disabled),
+  .btn:hover:not(:disabled) {
     @apply bg-prose text-white;
     @apply transition-colors duration-100 ease-in-out;
   }
