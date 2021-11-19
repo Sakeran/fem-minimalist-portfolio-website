@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn-primary {
+    @apply bg-primary-dark hover:bg-primary focus-visible:bg-primary disabled:bg-field;
+    @apply disabled:text-prose/40 text-white text-xs uppercase;
+    @apply transition-colors duration-100 ease-in-out;
+
+    letter-spacing: 2px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .btn-primary::before {
+    content: "";
+    width: 3rem;
+    aspect-ratio: 1;
+
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 10%);
+    background-image: url("/assets/images/icons/down-arrows.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .btn-primary:disabled::before,
+  .btn-primary:focus-visible::before,
+  .btn-primary:hover::before {
+    background-image: url("/assets/images/icons/down-arrows-white.svg");
+  }
+}
+
 @layer utilities {
   .heading-1 {
     @apply font-serif font-bold tracking-tightest leading-none text-4.5xl lg:text-max;
@@ -12,6 +46,6 @@
   }
 
   .heading-3 {
-    @apply  font-serif text-3.5xl tracking-tight leading-tight;
+    @apply font-serif text-3.5xl tracking-tight leading-tight;
   }
 }
