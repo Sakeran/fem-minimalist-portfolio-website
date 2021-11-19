@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .heading-1 {
+    @apply font-serif font-bold tracking-tightest leading-none text-4.5xl lg:text-max;
+  }
+
+  .heading-2 {
+    @apply font-serif font-bold text-4.5xl tracking-tighter leading-tighter;
+  }
+
+  .heading-3 {
+    @apply  font-serif text-3.5xl tracking-tight leading-tight;
+  }
+}

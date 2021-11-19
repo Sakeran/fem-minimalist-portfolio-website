@@ -6,13 +6,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href={Astro.resolve("../styles/global.css")}>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet"> 
+
+
   <title>Design System - FEM Minimalist Portfolio Website</title>
 </head>
-<body>
-  <h1>Design System</h1>
+<body class="font-sans leading-body">
+  <h1 class="heading-1">Design System</h1>
 
   <section>
-    <h2>Colors</h2>
+    <h2 class="heading-2">Colors</h2>
     <div>
       <h3>Primary</h3>
       <div>
@@ -57,15 +65,15 @@
   </section>
 
   <section>
-    <h2>Typography</h2>
+    <h2 class="heading-2">Typography</h2>
 
     <div>
       <h3>Font Family</h3>
-      <div>
+      <div class="font-serif">
         <p>Aa</p>
         <p>Ibarra Real Nova</p>
       </div>
-      <div>
+      <div class="font-sans">
         <p>Aa</p>
         <p>Public Sans</p>
       </div>
@@ -77,31 +85,31 @@
 
         <div>
           <p>H1, Ibarra Real Nova Bold, 50px, 50px Line, -0,45 Character</p>
-          <p>Jived fox nymph grabs quick waltz</p>
+          <p class="heading-1">Jived fox nymph grabs quick waltz</p>
         </div>
         <div>
           <p>H2, Ibarra Real Nova Bold, 40px, 42px Line, -0,36 Character</p>
-          <p>Jived fox nymph grabs quick waltz</p>
+          <p class="heading-2">Jived fox nymph grabs quick waltz</p>
         </div>
         <div>
           <p>H3, Ibarra Real Nova Regular, 32px, 36px Line, -0,29 Character</p>
-          <p>Jived fox nymph grabs quick waltz</p>
+          <p class="heading-3">Jived fox nymph grabs quick waltz</p>
         </div>
       </div>
 
       <div>
         <h3>Body</h3>
         <p>Body 1, Public Sans Regular, 16px, 30px Line</p>
-        <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque.</p>
+        <p class="text-base">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque.</p>
         <p>Body 2, Public Sans Regular, 15px, 30px Line</p>
-        <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque.</p>
+        <p class="text-sm">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque.</p>
       </div>
     </div>
 
   </section>
 
   <section>
-    <h2>Buttons</h2>
+    <h2 class="heading-2">Buttons</h2>
     <div>
       <h3>Primary</h3>
       <div>
@@ -136,7 +144,7 @@
   </section>
 
   <section>
-    <h2>Form Elements</h2>
+    <h2 class="heading-2">Form Elements</h2>
     <div>
       <div>
         <h3>Text Area</h3>
