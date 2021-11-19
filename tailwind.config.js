@@ -3,6 +3,7 @@ module.exports = {
   purge: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}"],
   theme: {
     colors: {
+      white: "hsl(0, 0%, 100%)",
       // Slightly Desaturated Cyan
       primary: "hsl(167deg, 36%, 54%)",
       // Dark Blue
