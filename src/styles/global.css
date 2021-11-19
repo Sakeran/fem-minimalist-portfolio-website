@@ -34,6 +34,22 @@
   .btn-primary:hover::before {
     background-image: url("/assets/images/icons/down-arrows-white.svg");
   }
+
+  .btn {
+    @apply border bg-none border-prose px-8 min-h-[3rem];
+    @apply text-xs uppercase;
+
+    letter-spacing: 2px;
+  }
+
+  .btn:focus:not(:disabled), .btn:hover:not(:disabled) {
+    @apply bg-prose text-white;
+    @apply transition-colors duration-100 ease-in-out;
+  }
+
+  .btn:disabled {
+    @apply border-prose/20 text-prose/20 cursor-default;
+  }
 }
 
 @layer utilities {
