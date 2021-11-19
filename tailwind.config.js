@@ -2,6 +2,20 @@ module.exports = {
   mode: "jit",
   purge: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}"],
   theme: {
+    colors: {
+      // Slightly Desaturated Cyan
+      primary: "hsl(167deg, 36%, 54%)",
+      // Dark Blue
+      "primary-dark": "hsl(205deg, 47%, 21%)",
+      // Grayish Dark Blue
+      prose: "hsl(245deg, 10%, 22%)",
+      // Very Light Grey (BG)
+      surface: "hsl(0deg, 0%, 98%)",
+      // Light Grey (Text Field)
+      field: "hsl(240deg, 2%, 92%)",
+      // Bright Red (Errors)
+      error: "hsl(0deg, 90%, 57%)",
+    },
     fontFamily: {
       serif: ["Ibarra Real Nova", "serif"],
       sans: ["Public Sans", "sans"],

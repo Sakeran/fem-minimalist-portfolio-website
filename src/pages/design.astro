@@ -19,48 +19,52 @@
 <body class="font-sans leading-body">
   <h1 class="heading-1">Design System</h1>
 
-  <section>
+  <section class="space-y-8">
     <h2 class="heading-2">Colors</h2>
-    <div>
-      <h3>Primary</h3>
-      <div>
-        <div></div>
-        <p>Slightly Desaturated Cyan</p>
-        <p>HSL(167deg, 36%, 54%)</p>
+    <div class="flex gap-16">
+      <h3 class="text-primary uppercase min-w-[10ch]">Primary</h3>
+
+      <div class="flex flex-grow">
+        <div class="w-full flex-grow">
+          <div class="bg-primary w-14 h-14 rounded-full"></div>
+          <p>Slightly Desaturated Cyan</p>
+          <p>HSL(167deg, 36%, 54%)</p>
+        </div>
+        <div class="w-full flex-grow">
+          <div class="bg-primary-dark w-14 h-14 rounded-full"></div>
+          <p>Dark Blue</p>
+          <p>HSL(205deg, 47%, 21%)</p>
+        </div>
+        <div class="w-full flex-grow">
+          <div class="bg-prose w-14 h-14 rounded-full"></div>
+          <p>Grayish Dark Blue</p>
+          <p>HSL(245deg, 10%, 22%)</p>
+        </div>
       </div>
 
-      <div>
-        <div></div>
-        <p>Dark Blue</p>
-        <p>HSL(205deg, 47%, 21%)</p>
-      </div>
-
-      <div>
-        <div></div>
-        <p>Grayish Dark Blue</p>
-        <p>HSL(245deg, 10%, 22%)</p>
-      </div>
     </div>
 
-    <div>
-      <h3>Secondary</h3>
-      <div>
-        <div></div>
-        <p>Very Light Grey (BG)</p>
-        <p>HSL(0deg, 0%, 98%)</p>
+    <div class="flex gap-16">
+      <h3 class="text-primary uppercase min-w-[10ch]">Secondary</h3>
+
+      <div class="flex flex-grow">
+        <div class="flex-grow w-full">
+          <div class="bg-surface w-14 h-14 rounded-full" style="border: 1px solid #d7d7d7;"></div>
+          <p>Very Light Grey (BG)</p>
+          <p>HSL(0deg, 0%, 98%)</p>
+        </div>
+        <div class="flex-grow w-full">
+          <div class="bg-field w-14 h-14 rounded-full"></div>
+          <p>Light Grey (Text Field)</p>
+          <p>HSL(240deg, 2%, 92%)</p>
+        </div>
+        <div class="flex-grow w-full">
+          <div class="bg-error w-14 h-14 rounded-full"></div>
+          <p>Bright Red (Errors)</p>
+          <p>HSL(0deg, 90%, 57%)</p>
+        </div>
       </div>
 
-      <div>
-        <div></div>
-        <p>Light Grey (Text Field)</p>
-        <p>HSL(240deg, 2%, 92%)</p>
-      </div>
-
-      <div>
-        <div></div>
-        <p>Bright Red (Errors)</p>
-        <p>HSL(0deg, 90%, 57%)</p>
-      </div>
     </div>
   </section>
 
@@ -68,7 +72,7 @@
     <h2 class="heading-2">Typography</h2>
 
     <div>
-      <h3>Font Family</h3>
+      <h3 class="text-primary uppercase">Font Family</h3>
       <div class="font-serif">
         <p>Aa</p>
         <p>Ibarra Real Nova</p>
@@ -81,7 +85,7 @@
 
     <div>
       <div>
-        <h3>Headings</h3>
+        <h3 class="text-primary uppercase">Headings</h3>
 
         <div>
           <p>H1, Ibarra Real Nova Bold, 50px, 50px Line, -0,45 Character</p>
@@ -98,7 +102,7 @@
       </div>
 
       <div>
-        <h3>Body</h3>
+        <h3 class="text-primary uppercase">Body</h3>
         <p>Body 1, Public Sans Regular, 16px, 30px Line</p>
         <p class="text-base">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque.</p>
         <p>Body 2, Public Sans Regular, 15px, 30px Line</p>
@@ -111,7 +115,7 @@
   <section>
     <h2 class="heading-2">Buttons</h2>
     <div>
-      <h3>Primary</h3>
+      <h3 class="text-primary uppercase">Primary</h3>
       <div>
         <p>Normal State</p>
         <button></button>
@@ -127,7 +131,7 @@
 
     </div>
     <div>
-      <h3>Secondary</h3>
+      <h3 class="text-primary uppercase">Secondary</h3>
       <div>
         <p>Normal State</p>
         <button></button>
@@ -147,7 +151,7 @@
     <h2 class="heading-2">Form Elements</h2>
     <div>
       <div>
-        <h3>Text Area</h3>
+        <h3 class="text-primary uppercase">Text Area</h3>
         <div>
           <p>Normal State</p>
           <textarea name="" id="" cols="30" rows="2"></textarea>
@@ -162,7 +166,7 @@
         </div>
       </div>
       <div>
-        <h3>Text Field</h3>
+        <h3 class="text-primary uppercase">Text Field</h3>
         <div>
           <p>Normal State</p>
           <input name="" id=""/>
