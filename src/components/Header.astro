@@ -1,0 +1,85 @@
+---
+const route = Astro.request.url.pathname;
+---
+
+<header
+  class="
+    relative
+    container
+    mx-auto
+    px-8
+    sm:px-10
+    py-6
+    |
+    flex
+    justify-between
+    items-center
+  "
+>
+  <div>
+    <img src="/assets/images/logo.svg" alt="Portfolio Logo" />
+  </div>
+  <nav>
+    <button
+      class="block"
+      id="primary-nav-toggle"
+      aria-controls="primary-navigation"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle Menu</span
+      ><img src="/assets/images/icons/hamburger.svg" alt="" />
+    </button>
+
+    <ul
+      class="
+        opacity-0
+        transition-opacity
+        duration-300
+        ease-in-out
+        |
+        absolute
+        top-full
+        left-[30%]
+        right-8
+        py-10
+        |
+        bg-prose
+        text-white
+        text-xs
+        uppercase
+        tracking-wide
+        |
+        flex flex-col
+        gap-8
+        items-center
+      "
+      id="primary-navigation"
+    >
+      <li><a class={route == "/" ? "text-primary" : ""} href="/">Home</a></li>
+      <li><a class={route == "/portfolio" ? "text-primary" : ""} href="/portfolio">Portfolio</a></li>
+      <li><a class={route == "/contact" ? "text-primary" : ""} href="/contact">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script hoist>
+  const nav = document.getElementById("primary-navigation");
+  const toggle = document.getElementById("primary-nav-toggle");
+  const toggleIcon = toggle.querySelector("img");
+
+  let navVisible = false;
+
+  toggle.addEventListener("click", () => {
+    navVisible = !navVisible;
+
+    if (navVisible) {
+      toggle.setAttribute("aria-expanded", "true");
+      toggleIcon.setAttribute("src", "/assets/images/icons/close.svg");
+      nav.classList.remove("opacity-0");
+    } else {
+      toggle.setAttribute("aria-expanded", "false");
+      toggleIcon.setAttribute("src", "/assets/images/icons/hamburger.svg");
+      nav.classList.add("opacity-0");
+    }
+  });
+</script>

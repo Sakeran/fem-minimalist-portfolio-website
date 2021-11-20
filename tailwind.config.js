@@ -30,6 +30,7 @@ module.exports = {
       tightest: "-0.45px",
       tighter: "-0.36px",
       tight: "-0.29px",
+      wide: "2px"
     },
     extend: {
       fontSize: {
