@@ -1,5 +1,8 @@
 ---
 const route = Astro.request.url.pathname;
+
+const linkClasses = "hover:text-prose/80 focus-visible:text-prose/80";
+const activeLinkClasses = "text-primary";
 ---
 
 <header
@@ -21,7 +24,7 @@ const route = Astro.request.url.pathname;
   </div>
   <nav>
     <button
-      class="block"
+      class="block sm:hidden"
       id="primary-nav-toggle"
       aria-controls="primary-navigation"
       aria-expanded="false"
@@ -36,28 +39,35 @@ const route = Astro.request.url.pathname;
         transition-opacity
         duration-300
         ease-in-out
+        sm:opacity-100
         |
         absolute
+        sm:static
         top-full
         left-[30%]
         right-8
         py-10
+        sm:py-16
         |
         bg-prose
         text-white
         text-xs
         uppercase
         tracking-wide
+        sm:bg-transparent
+        sm:text-prose
         |
         flex flex-col
         gap-8
         items-center
+        sm:flex-row
+        sm:gap-10
       "
       id="primary-navigation"
     >
-      <li><a class={route == "/" ? "text-primary" : ""} href="/">Home</a></li>
-      <li><a class={route == "/portfolio" ? "text-primary" : ""} href="/portfolio">Portfolio</a></li>
-      <li><a class={route == "/contact" ? "text-primary" : ""} href="/contact">Contact Me</a></li>
+      <li><a class={route == "/" ? activeLinkClasses : linkClasses} href="/">Home</a></li>
+      <li><a class={route == "/portfolio" ? activeLinkClasses : linkClasses} href="/portfolio">Portfolio</a></li>
+      <li><a class={route == "/contact" ? activeLinkClasses : linkClasses} href="/contact">Contact Me</a></li>
     </ul>
   </nav>
 </header>
