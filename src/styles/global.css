@@ -51,6 +51,22 @@
   .btn:disabled {
     @apply border-prose/20 text-prose/20 cursor-default;
   }
+
+  .textfield {
+    @apply px-4 py-3 bg-field border border-transparent text-input min-w-[15rem];
+  }
+
+  .textfield:focus {
+    @apply outline-none border-primary;
+  }
+
+  .textfield:invalid {
+    @apply border-error;
+  }
+
+  .textfield.textfield-area {
+    @apply min-h-[4.5rem] resize-none;
+  }
 }
 
 @layer utilities {

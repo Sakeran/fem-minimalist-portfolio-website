@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     colors: {
       white: "hsl(0, 0%, 100%)",
+      transparent: "transparent",
       // Slightly Desaturated Cyan
       primary: "hsl(167deg, 36%, 54%)",
       // Dark Blue
@@ -28,6 +29,7 @@ module.exports = {
     },
     extend: {
       fontSize: {
+        input: "0.8125rem",
         sm: "0.9375rem",
         "3.5xl": "2rem",
         "4.5xl": "2.5rem",

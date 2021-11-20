@@ -68,8 +68,8 @@
     </div>
   </section>
 
-  <section hidden>
-    <h2 class="heading-2">Typography</h2>
+  <section class="my-24">
+    <h2 class="heading-2 mb-16">Typography</h2>
 
     <div class="flex gap-8">
       <h3 class="text-primary uppercase">Font Family</h3>
@@ -83,8 +83,8 @@
       </div>
     </div>
 
-    <div>
-      <div>
+    <div class="flex gap-16 mt-16">
+      <div class="space-y-16">
         <h3 class="text-primary uppercase">Headings</h3>
 
         <div>
@@ -114,66 +114,68 @@
 
   <section>
     <h2 class="heading-2">Buttons</h2>
-    <div>
-      <h3 class="text-primary uppercase">Primary</h3>
+    <div class="flex gap-8">
       <div>
-        <p>Normal State</p>
-        <button class="btn-primary">About Me</button>
+        <h3 class="text-primary uppercase">Primary</h3>
+        <div>
+          <p>Normal State</p>
+          <button class="btn-primary">About Me</button>
+        </div>
+        <div>
+          <p>Disabled State</p>
+          <button disabled class="btn-primary">About Me</button>
+        </div>
       </div>
       <div>
-        <p>Disabled State</p>
-        <button disabled class="btn-primary">About Me</button>
-      </div>
-
-    </div>
-    <div>
-      <h3 class="text-primary uppercase">Secondary</h3>
-      <div>
-        <p>Normal State</p>
-        <button class="btn">Contact Me</button>
-      </div>
-      <div>
-        <p>Hover State</p>
-        <button></button>
-      </div>
-      <div>
-        <p>Disabled State</p>
-        <button disabled class="btn">Contact Me</button>
+        <h3 class="text-primary uppercase">Secondary</h3>
+        <div>
+          <p>Normal State</p>
+          <button class="btn">Contact Me</button>
+        </div>
+        <div>
+          <p>Disabled State</p>
+          <button disabled class="btn">Contact Me</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="p-2">
     <h2 class="heading-2">Form Elements</h2>
-    <div>
+    <div class="flex gap-4">
       <div>
         <h3 class="text-primary uppercase">Text Area</h3>
         <div>
           <p>Normal State</p>
-          <textarea name="" id="" cols="30" rows="2"></textarea>
-        </div>
-        <div>
-          <p>Active State</p>
-          <textarea name="" id="" cols="30" rows="2"></textarea>
+
+          <div class="flex flex-col gap-4 items-start">
+            <label class="font-bold text-input" for=".">Message</label>
+            <textarea class="textfield textfield-area" name="" id=""></textarea>
+          </div>
         </div>
         <div>
           <p>Error State</p>
-          <textarea name="" id="" cols="30" rows="2"></textarea>
+          <div class="flex flex-col gap-2 items-start">
+            <label class="font-bold text-input" for=".">Message</label>
+            <textarea class="textfield textfield-area" id="" required></textarea>
+            <p class="text-error text-[0.625rem]">This field is required.</p>
+          </div>
         </div>
       </div>
       <div>
         <h3 class="text-primary uppercase">Text Field</h3>
-        <div>
+        <div class="flex flex-col gap-2">
           <p>Normal State</p>
-          <input name="" id=""/>
+          <label class="font-bold text-input" for=".">Name</label>
+          <input class="textfield" placeholder="Insert your name here." name="" id=""/>
         </div>
-        <div>
-          <p>Active State</p>
-          <input name="" id=""/>
-        </div>
-        <div>
+        <div class="flex flex-col gap-2">
           <p>Error State</p>
-          <input name="" id=""/>
+          <div>
+            <label class="block font-bold text-input" for=".">Name</label>
+            <input class="block textfield mt-2" name="" id="" required/>
+            <p class="text-error text-[0.625rem] mt-1">This field is required.</p>
+          </div>
         </div>
       </div>
     </div>
