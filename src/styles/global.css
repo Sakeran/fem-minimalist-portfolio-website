@@ -71,7 +71,7 @@
 
 @layer utilities {
   .heading-1 {
-    @apply font-serif font-bold tracking-tightest leading-none text-4.5xl lg:text-max;
+    @apply font-serif font-bold tracking-tightest leading-none text-4.5xl md:text-max;
   }
 
   .heading-2 {

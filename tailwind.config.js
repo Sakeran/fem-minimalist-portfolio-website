@@ -2,6 +2,10 @@ module.exports = {
   mode: "jit",
   purge: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}"],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '1110px',
+    },
     colors: {
       white: "hsl(0, 0%, 100%)",
       transparent: "transparent",
