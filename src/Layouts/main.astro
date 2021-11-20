@@ -23,16 +23,21 @@ const { title } = Astro.props;
   </head>
 
 
-  <body class="bg-surface text-prose font-sans leading-body min-h-screen overflow-hidden">
-    <a hidden href="#main-content">Skip to Main Content</a>
+  <body class="bg-surface text-prose font-sans leading-body | flex flex-col min-h-screen">
+    <a class="absolute top-1 left-1 z-50 | p-4 | bg-prose text-white font-bold outline-black cursor-pointer | -translate-y-24 focus-visible:translate-y-0 transition-transform duration-150 ease-in-out" href="#main-content">Skip to Main Content</a>
 
-    <Header />
+    <div>
+      <Header />
+    </div>
+
 
     <main id="main-content">
       <slot />
     </main>
 
-    <footer></footer>
+    <div class="mt-auto">
+      <footer> FOOTER</footer>
+    </div>
 
   </body>
 </html>
