@@ -1,14 +1,15 @@
 ---
 const route = Astro.request.url.pathname;
 
-const linkClasses = "hover:text-prose/80 focus-visible:text-prose/80";
+const linkClasses = "sm:hover:text-prose/80 sm:focus-visible:text-prose/80";
 const activeLinkClasses = "text-primary";
 ---
 
 <header
   class="
     relative
-    container
+    max-w-[1110px]
+    box-content
     mx-auto
     px-8
     sm:px-10
