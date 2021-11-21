@@ -82,6 +82,13 @@
     @apply font-serif text-3.5xl tracking-tight leading-tight;
   }
 
+  .wrapper {
+    box-sizing: content-box;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .footer-link {
     @apply hover:text-primary focus-visible:text-primary focus-visible:outline-white transition-colors duration-150 ease-in-out;
   }
