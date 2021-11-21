@@ -41,6 +41,9 @@
     @apply border bg-none border-prose px-8 min-h-[3rem];
     @apply text-xs uppercase;
 
+    display: flex;
+    align-items: center;
+    max-width: max-content;
     letter-spacing: 2px;
   }
 
@@ -68,6 +71,19 @@
 
   .textfield.textfield-area {
     @apply min-h-[4.5rem] resize-none;
+  }
+
+  @screen sm {
+    .contact-me-section::after {
+      content: "";
+  
+      order: 1;
+      flex-grow: 1;
+  
+      height: 1px;
+      background-color: theme('colors.prose');
+      opacity: 0.15;
+    }
   }
 }
 
