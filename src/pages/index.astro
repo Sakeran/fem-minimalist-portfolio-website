@@ -3,5 +3,18 @@ import Layout from "../Layouts/main.astro"
 ---
 
 <Layout>
-  <p>I am the content for this layout.</p>
+  <section id="intro">
+    <div class="wrapper | sm:grid">
+      <picture class="sm:row-span-full sm:col-span-full sm:place-self-center | w-full">
+        <source media="(min-width: 1024px)" srcset="/assets/images/homepage/desktop/image-homepage-hero.jpg 1x, /assets/images/homepage/desktop/image-homepage-hero@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="/assets/images/homepage/tablet/image-homepage-hero.jpg 1x, /assets/images/homepage/tablet/image-homepage-hero@2x.jpg 2x">
+        <source srcset="/assets/images/homepage/mobile/image-homepage-hero.jpg 1x, /assets/images/homepage/mobile/image-homepage-hero@2x.jpg 2x">
+        <img class="w-full object-cover" src="/assets/images/homepage/mobile/image-homepage-hero.jpg" alt="a desktop computer monitor">
+      </picture>
+      <div class="sm:row-span-full sm:col-span-full sm:bg-white sm:justify-self-start sm:self-end sm:w-[75%] md:w-[40%]">
+        <h1 class="heading-1 pt-6 pb-8 sm:pt-14 sm:pb-12 sm:max-w-[19ch] md:max-w-[13ch]">Hey, I’m Alex Spencer and I love building beautiful websites</h1>
+        <a class="btn-primary">About Me</a>
+      </div>
+    </div>
+  </section>
 </Layout>

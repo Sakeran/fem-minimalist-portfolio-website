@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     screens: {
       'sm': '640px',
-      'md': '1110px',
+      'md': '1024px',
     },
     colors: {
       white: "hsl(0, 0%, 100%)",

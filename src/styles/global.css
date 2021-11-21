@@ -8,6 +8,8 @@
     @apply disabled:text-prose/40 text-white text-xs uppercase;
     @apply transition-colors duration-100 ease-in-out;
 
+    max-width: max-content;
+    cursor: pointer;
     letter-spacing: 2px;
 
     display: flex;
@@ -83,10 +85,8 @@
   }
 
   .wrapper {
-    box-sizing: content-box;
+    @apply px-8 sm:px-10 mx-auto box-content;
     max-width: 1110px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .footer-link {
