@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @layer components {
   .btn-primary {
     @apply bg-primary-dark hover:bg-primary focus-visible:bg-primary disabled:bg-field;
