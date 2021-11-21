@@ -81,4 +81,8 @@
   .heading-3 {
     @apply font-serif text-3.5xl tracking-tight leading-tight;
   }
+
+  .footer-link {
+    @apply hover:text-primary focus-visible:text-primary focus-visible:outline-white transition-colors duration-150 ease-in-out;
+  }
 }
