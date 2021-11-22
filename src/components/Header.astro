@@ -39,7 +39,9 @@ const activeLinkClasses = "text-primary focus-visible:outline-black";
         transition-opacity
         duration-300
         ease-in-out
+        pointer-events-none
         sm:opacity-100
+        sm:pointer-events-auto
         |
         absolute
         sm:static
@@ -66,7 +68,7 @@ const activeLinkClasses = "text-primary focus-visible:outline-black";
       id="primary-navigation"
     >
       <li><a class={route == "/" ? activeLinkClasses : linkClasses} href="/">Home</a></li>
-      <li><a class={route == "/portfolio" ? activeLinkClasses : linkClasses} href="/portfolio">Portfolio</a></li>
+      <li><a class={route.startsWith("/portfolio") ? activeLinkClasses : linkClasses} href="/portfolio">Portfolio</a></li>
       <li><a class={route == "/contact" ? activeLinkClasses : linkClasses} href="/contact">Contact Me</a></li>
     </ul>
   </nav>
@@ -86,10 +88,12 @@ const activeLinkClasses = "text-primary focus-visible:outline-black";
       toggle.setAttribute("aria-expanded", "true");
       toggleIcon.setAttribute("src", "/assets/images/icons/close.svg");
       nav.classList.remove("opacity-0");
+      nav.classList.remove("pointer-events-none");
     } else {
       toggle.setAttribute("aria-expanded", "false");
       toggleIcon.setAttribute("src", "/assets/images/icons/hamburger.svg");
       nav.classList.add("opacity-0");
+      nav.classList.add("pointer-events-none");
     }
   });
 </script>
