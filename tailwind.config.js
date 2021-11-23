@@ -3,8 +3,8 @@ module.exports = {
   purge: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}"],
   theme: {
     screens: {
-      'sm': '640px',
-      'md': '1024px',
+      sm: "640px",
+      md: "1024px",
     },
     colors: {
       white: "hsl(0, 0%, 100%)",
@@ -30,12 +30,13 @@ module.exports = {
       tightest: "-0.45px",
       tighter: "-0.36px",
       tight: "-0.29px",
-      wide: "2px"
+      wide: "2px",
     },
     extend: {
       fontSize: {
         input: "0.8125rem",
         sm: "0.9375rem",
+        md: "1rem",
         "3.5xl": "2rem",
         "4.5xl": "2.5rem",
         max: "3.125rem",

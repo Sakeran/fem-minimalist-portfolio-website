@@ -79,6 +79,58 @@
     @apply min-h-[4.5rem] resize-none;
   }
 
+  .detail-overview {
+    display: grid;
+    gap: theme("spacing.6");
+
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "text"
+      "skills"
+      "visit-btn";
+  }
+
+  @screen sm {
+    .detail-overview {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0;
+      row-gap: theme("spacing.4");
+      
+      grid-template-areas:
+      "title text"
+      "skills text"
+      "visit-btn text"
+      ". text";
+    }
+  }
+
+  @screen md {
+    .detail-overview {
+      grid-template-columns: 1fr;
+      gap: theme("spacing.6");
+      
+      grid-template-areas:
+      "title"
+      "text"
+      "skills"
+      "visit-btn";
+    }
+  }
+
+  .detail-overview h1 {
+    grid-area: title;
+  }
+  .detail-overview-text {
+    grid-area: text;
+  }
+  .detail-overview-skills {
+    grid-area: skills;
+  }
+  .detail-overview-visit-btn {
+    grid-area: visit-btn;
+  }
+
   @screen sm {
     .contact-me-section::after {
       content: "";
