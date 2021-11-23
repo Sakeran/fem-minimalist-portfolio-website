@@ -1,0 +1,44 @@
+---
+  import PortfolioDetail from "../../Layouts/portfolioDetail.astro"
+
+  const links = {
+    previousLink: "/portfolio/manage",
+    previousTitle: "Manage",
+    nextLink: "/portfolio/insure",
+    nextTitle: "Insure"
+  };
+---
+
+  <PortfolioDetail title="Bookmark" {...links}>
+    <picture slot="hero" class="">
+      <source media="(min-width: 1024px)" srcset="/assets/images/detail/desktop/image-bookmark-hero.jpg 1x, /assets/images/detail/desktop/image-bookmark-hero@2x.jpg 2x">
+      <source media="(min-width: 640px)" srcset="/assets/images/detail/tablet/image-bookmark-hero.jpg 1x, /assets/images/detail/tablet/image-bookmark-hero@2x.jpg 2x">
+      <source srcset="/assets/images/detail/mobile/image-bookmark-hero.jpg 1x, /assets/images/detail/mobile/image-bookmark-hero@2x.jpg 2x">
+      <img class="w-full" src="/assets/images/detail/mobile/image-bookmark-hero.jpg" alt="screenshot of the bookmark project">
+    </picture>
+
+    <p slot="skills">Interaction Design / Front End Development</p>
+    <p slot="skills">HTML / CSS / JS</p>
+
+    <p slot="overview">
+      This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.
+    </p>
+
+    <p slot="background">
+      This project was a front-end challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.
+    </p>
+
+    <picture slot="previews">
+      <source media="(min-width: 1024px)" srcset="/assets/images/detail/desktop/image-bookmark-preview-1.jpg 1x, /assets/images/detail/desktop/image-bookmark-preview-1@2x.jpg 2x">
+      <source media="(min-width: 640px)" srcset="/assets/images/detail/tablet/image-bookmark-preview-1.jpg 1x, /assets/images/detail/tablet/image-bookmark-preview-1@2x.jpg 2x">
+      <source srcset="/assets/images/detail/mobile/image-bookmark-preview-1.jpg 1x, /assets/images/detail/mobile/image-bookmark-preview-1@2x.jpg 2x">
+      <img class="w-full" src="/assets/images/detail/mobile/image-bookmark-preview-1.jpg" alt="screenshot of the bookmark project">
+    </picture>
+
+    <picture slot="previews" class="">
+      <source media="(min-width: 1024px)" srcset="/assets/images/detail/desktop/image-bookmark-preview-2.jpg 1x, /assets/images/detail/desktop/image-bookmark-preview-2@2x.jpg 2x">
+      <source media="(min-width: 640px)" srcset="/assets/images/detail/tablet/image-bookmark-preview-2.jpg 1x, /assets/images/detail/tablet/image-bookmark-preview-2@2x.jpg 2x">
+      <source srcset="/assets/images/detail/mobile/image-bookmark-preview-2.jpg 1x, /assets/images/detail/mobile/image-bookmark-preview-2@2x.jpg 2x">
+      <img class="w-full" src="/assets/images/detail/mobile/image-bookmark-preview-2.jpg" alt="screenshot of the bookmark project">
+    </picture>
+  </PortfolioDetail>

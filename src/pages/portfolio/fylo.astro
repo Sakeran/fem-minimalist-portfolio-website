@@ -1,0 +1,44 @@
+---
+  import PortfolioDetail from "../../Layouts/portfolioDetail.astro"
+
+  const links = {
+    previousLink: "/portfolio/insure",
+    previousTitle: "Insure",
+    nextLink: "/portfolio/manage",
+    nextTitle: "Manage"
+  };
+---
+
+  <PortfolioDetail title="Fylo" {...links}>
+    <picture slot="hero" class="">
+      <source media="(min-width: 1024px)" srcset="/assets/images/detail/desktop/image-fylo-hero.jpg 1x, /assets/images/detail/desktop/image-fylo-hero@2x.jpg 2x">
+      <source media="(min-width: 640px)" srcset="/assets/images/detail/tablet/image-fylo-hero.jpg 1x, /assets/images/detail/tablet/image-fylo-hero@2x.jpg 2x">
+      <source srcset="/assets/images/detail/mobile/image-fylo-hero.jpg 1x, /assets/images/detail/mobile/image-fylo-hero@2x.jpg 2x">
+      <img class="w-full" src="/assets/images/detail/mobile/image-fylo-hero.jpg" alt="screenshot of the fylo project">
+    </picture>
+
+    <p slot="skills">Interaction Design / Front End Development</p>
+    <p slot="skills">HTML / CSS / JS</p>
+
+    <p slot="overview">
+      This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.
+    </p>
+
+    <p slot="background">
+      This project was a front-end challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.
+    </p>
+
+    <picture slot="previews">
+      <source media="(min-width: 1024px)" srcset="/assets/images/detail/desktop/image-fylo-preview-1.jpg 1x, /assets/images/detail/desktop/image-fylo-preview-1@2x.jpg 2x">
+      <source media="(min-width: 640px)" srcset="/assets/images/detail/tablet/image-fylo-preview-1.jpg 1x, /assets/images/detail/tablet/image-fylo-preview-1@2x.jpg 2x">
+      <source srcset="/assets/images/detail/mobile/image-fylo-preview-1.jpg 1x, /assets/images/detail/mobile/image-fylo-preview-1@2x.jpg 2x">
+      <img class="w-full" src="/assets/images/detail/mobile/image-fylo-preview-1.jpg" alt="screenshot of the fylo project">
+    </picture>
+
+    <picture slot="previews" class="">
+      <source media="(min-width: 1024px)" srcset="/assets/images/detail/desktop/image-fylo-preview-2.jpg 1x, /assets/images/detail/desktop/image-fylo-preview-2@2x.jpg 2x">
+      <source media="(min-width: 640px)" srcset="/assets/images/detail/tablet/image-fylo-preview-2.jpg 1x, /assets/images/detail/tablet/image-fylo-preview-2@2x.jpg 2x">
+      <source srcset="/assets/images/detail/mobile/image-fylo-preview-2.jpg 1x, /assets/images/detail/mobile/image-fylo-preview-2@2x.jpg 2x">
+      <img class="w-full" src="/assets/images/detail/mobile/image-fylo-preview-2.jpg" alt="screenshot of the fylo project">
+    </picture>
+  </PortfolioDetail>
