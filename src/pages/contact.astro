@@ -50,21 +50,30 @@ import Layout from "../Layouts/main.astro";
     <div class="mt-8 md:mt-12 mb-20 sm:mb-24 md:mb-28 | flex flex-col gap-6 md:flex-row md:gap-[7rem]">
       <h2 class="heading-2 | md:w-[60%]">Contact Me</h2>
 
-      <form class="flex flex-col gap-6 md:w-full" action="#">
+      <form id="contact-form" class="flex flex-col gap-6 md:w-full" action="/contact">
 
         <div class="flex flex-col gap-2">
           <label class="font-bold text-input" for="name">Name</label>
-          <input class="textfield" id="name" type="text" placeholder="Jane Appleseed">
+          <div class="flex flex-col gap-1">
+            <input class="textfield" name="name" id="name" type="text" placeholder="Jane Appleseed">
+            <p id="name-errors" class="text-error text-[0.625rem]"></p>
+          </div>
         </div>
 
         <div class="flex flex-col gap-2">
           <label class="font-bold text-input" for="email">Email</label>
-          <input class="textfield" id="email" type="email" placeholder="email@example.com">
+          <div class="flex flex-col gap-1">
+            <input class="textfield" name="email" id="email" type="email" placeholder="email@example.com">
+            <p id="email-errors" class="text-error text-[0.625rem]"></p>
+          </div>
         </div>
 
         <div class="flex flex-col gap-2">
           <label class="font-bold text-input" for="message">Message</label>
-          <textarea class="textfield textfield-area" id="message" placeholder="How can I help?"></textarea>
+          <div class="flex flex-col gap-1">
+            <textarea name="message" class="textfield textfield-area" id="message" placeholder="How can I help?"></textarea>
+            <p id="message-errors" class="text-error text-[0.625rem]"></p>
+          </div>
         </div>
 
         <input class="btn | bg-primary-dark text-white | cursor-pointer" type="submit" value="Send Message">
@@ -72,3 +81,59 @@ import Layout from "../Layouts/main.astro";
     </div>
   </div>
 </Layout>
+
+<script hoist>
+  const form = document.getElementById("contact-form");
+
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const message = document.getElementById("message");
+
+  const nameErrors = document.getElementById("name-errors");
+  const emailErrors = document.getElementById("email-errors");
+  const messageErrors = document.getElementById("message-errors");
+
+  // Show errors if needed on submit
+
+  form.addEventListener("submit", (e) => {
+    let hasErrors = false;
+    
+    if (!name.value) {
+      hasErrors = true;
+      nameErrors.innerHTML = "This field is required."
+    }
+
+    if (!email.value) {
+      hasErrors = true;
+      emailErrors.innerHTML = "This field is required."
+    } else if (!email.validity.valid) {
+      hasErrors = true;
+      emailErrors.innerHTML = "Please enter a valid email address"
+    }
+
+
+    if (!message.value) {
+      hasErrors = true;
+      messageErrors.innerHTML = "This field is required."
+    }
+
+    
+    if (hasErrors) {
+      e.preventDefault();
+    }
+  });
+
+  // Clear error messages while typing
+
+  name.addEventListener("input", () => {
+    nameErrors.innerHTML = "";
+  });
+
+  email.addEventListener("input", () => {
+    emailErrors.innerHTML = "";
+  });
+
+  message.addEventListener("input", () => {
+    messageErrors.innerHTML = "";
+  });
+</script>
